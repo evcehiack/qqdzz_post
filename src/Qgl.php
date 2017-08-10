@@ -31,4 +31,22 @@ class Qgl extends ProxyStrategy
         //curl_setopt($this->client,)
         return $this->get('http://www.qqgonglue.com/php/do12.php?url='.$this->url);
     }
+
+
+    public function handleResult($result)
+    {
+        // TODO: Implement handleResult() method.
+        $t=json_decode($result,true);
+        if ($t && $t['code']=='0'){
+            return [
+              'statu'=>200,
+              'id'=>$t['id'],
+              'account'=>$t['account']
+            ];
+        }else{
+            return [
+                'statu'=>500
+            ];
+        }
+    }
 }

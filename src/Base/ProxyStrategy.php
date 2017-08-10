@@ -45,4 +45,6 @@ abstract class ProxyStrategy
         return $res;
     }
 
+    abstract public function handleResult($result);
+
 }
