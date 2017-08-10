@@ -1,0 +1,10 @@
+{
+    "name": "evcehiack/qq_proxy",
+    "description": "a lib for qqdzz",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Evcehiack\\": "src/"}
+    }
+}
